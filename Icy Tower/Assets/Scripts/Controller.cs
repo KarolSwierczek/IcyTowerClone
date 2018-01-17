@@ -17,90 +17,89 @@ public class Controller : MonoBehaviour {
     public float Gravity = 75.0f;
     public LayerMask Ground;
 
-    private Rigidbody _body;
-    private Collider _collider;
-    private float _input = 0.0f;
-    private bool _isGrounded = true;
-    private Transform _groundChecker;
-    private float _horizontalVelocity = 0.0f;
-    private float _verticalVelocity = 0.0f;
-    private bool _isJumping = false;
-    private float _timer = 0.0f;
-    private float _jumpModifier = 0.0f;
+    private Rigidbody body;
+    private float input = 0.0f;
+    private bool isGrounded = true;
+    private Transform groundChecker;
+    private float horizontalVelocity = 0.0f;
+    private float verticalVelocity = 0.0f;
+    private bool isJumping = false;
+    private float timer = 0.0f;
+    private float jumpModifier = 0.0f;
 
 
     void Start()
     {
-        _body = GetComponent<Rigidbody>();
-        _collider = GetComponent<CapsuleCollider>();
-        _groundChecker = transform.GetChild(0);
-        _timer = 0;
+        body = GetComponent<Rigidbody>();
+        groundChecker = transform.GetChild(0);
+        timer = 0;
     }
 
     void Update()
     {
-        _isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
-        _input = Input.GetAxisRaw("Horizontal");
+        isGrounded = (Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore) && verticalVelocity <= 0);
+        input = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButton("Jump") && _isGrounded && !_isJumping)
+        if (Input.GetButton("Jump") && isGrounded && !isJumping)
         {
             //Jumping with constant velocity. 
             //Can't use AddForce, bc sometimes the vertical velocity doesn't reset fast enaugh when Player is grounded and it affects jumping velocity.
-            _verticalVelocity = JumpHeight / JumpTime * (1 + _jumpModifier); 
-            _body.velocity = new Vector3(_body.velocity.x, _verticalVelocity, 0.0f);  
-            _isJumping = true;
+            verticalVelocity = JumpHeight / JumpTime * jumpModifier; 
+            body.velocity = new Vector3(body.velocity.x, verticalVelocity, 0.0f);  
+            isJumping = true;
         }
 
-        if (_isJumping)
+        if (isJumping)
         {
             //When the timer runs out, "gravity" is applied.
-            _timer += Time.deltaTime;
-            if (_timer >= JumpTime * (1 + 0.5f * _jumpModifier))
+            timer += Time.deltaTime;
+            if (timer >= JumpTime * jumpModifier)
             {
-                _isJumping = false;
-                _timer = 0;
+                isJumping = false;
+                timer = 0;
             }
         }
-
     }
 
     private void FixedUpdate()
     {
         //jump modifier update.
-        _jumpModifier = UpdateJumpModifier(_horizontalVelocity);
-        _collider.material.bounciness = 0.6f + 0.4f*_jumpModifier / Flow;
+        if (isGrounded)
+        {
+            jumpModifier = UpdateJumpModifier(horizontalVelocity);
+        }
 
-        if (_input * _horizontalVelocity < 0)
+        if (input * horizontalVelocity < 0)
         {
             //When trying to change direction, increase acceleration proportionally to current horizontal velocity value.
-            _input += Mathf.Abs(_body.velocity.x) * ReverseSpeed * _input;    
+            input += Mathf.Abs(body.velocity.x) * ReverseSpeed * input;    
         }
         
-        if (_input == 0) {
+        if (input == 0) {
 
             //When no button is being pressed, the horizontal velocity decreases. 
             //Similar to Physics friction, but it doesnt apply to normal movement.
-            _input = -1 * Deceleration * _body.velocity.x;
+            input = -1 * Deceleration * body.velocity.x;
         }
-        _horizontalVelocity = SpeedLimit(_body.velocity.x + _input * Time.fixedDeltaTime * Acceleration, MaxSpeed);
+        horizontalVelocity = SpeedLimit(body.velocity.x + input * Time.fixedDeltaTime * Acceleration, MaxSpeed);
 
 
-        if (!_isGrounded && !_isJumping)
+        if (!isGrounded && !isJumping)
         {
             //Falling. Have to use this over Physics gravity in order to get constant jumping velocity.
-            _verticalVelocity = SpeedLimit(_body.velocity.y - Gravity*Time.fixedDeltaTime, MaxSpeed);
+            verticalVelocity = SpeedLimit(body.velocity.y - Gravity*Time.fixedDeltaTime, MaxSpeed);
         }
         else
         {
             //Conserve vertical velocity.
-            _verticalVelocity = SpeedLimit(_body.velocity.y, JumpHeight / JumpTime);
+            verticalVelocity = SpeedLimit(body.velocity.y, JumpHeight / JumpTime * jumpModifier);
         }
 
         //Velovity update. More convinient than using AddForce, because of the SpeedLimit.
-        _body.velocity = new Vector3(_horizontalVelocity, _verticalVelocity, 0.0f);
+        body.velocity = new Vector3(horizontalVelocity, verticalVelocity, 0.0f);
     }
 
-    
+
     //Returns speed or limit with speeds' direction.
     private float SpeedLimit(float speed, float limit)
     {
@@ -119,9 +118,9 @@ public class Controller : MonoBehaviour {
     {
         if (Mathf.Abs(velocity) > FlowThreshold * MaxSpeed)
         {
-            return Flow*(Mathf.Abs(velocity) - MaxSpeed * FlowThreshold) / (MaxSpeed * FlowThreshold);
+            return 1 + Flow*(Mathf.Abs(velocity) - MaxSpeed * FlowThreshold) / (MaxSpeed * (1-FlowThreshold));
         }
-        return 0;
+        return 1;
     }
 
 }

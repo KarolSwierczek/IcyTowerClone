@@ -6,20 +6,20 @@ public class CameraMovement : MonoBehaviour {
 
     public Transform Player;
 
-    private float _risingSpeed = 0.0f;
-    private float _altitudeDifference;
-    private Transform _camera;
+    private float risingSpeed = 0.0f;
+    private float altitudeDifference;
+    private new Transform camera;
 
 	void Start () {
-        _camera = GetComponent<Transform>();
+        camera = GetComponent<Transform>();
 	}
 	
 	void Update () {
-        _altitudeDifference = Player.position.y - _camera.position.y - 5.2f;
+        altitudeDifference = Player.position.y - camera.position.y - 5.2f;
 
-        if (_altitudeDifference > 0)
+        if (altitudeDifference > 0)
         {
-            _camera.Translate(new Vector3(0, _altitudeDifference, 0));
+            camera.Translate(new Vector3(0, altitudeDifference, 0));
         }
 
 	}

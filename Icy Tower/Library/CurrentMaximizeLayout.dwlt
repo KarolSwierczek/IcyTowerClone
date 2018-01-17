@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 915, y: 492}
-  m_MaxSize: {x: 22010, y: 14042}
+  m_MinSize: {x: 911, y: 471}
+  m_MaxSize: {x: 22006, y: 14021}
   vertical: 0
-  controlID: 15753
+  controlID: 26389
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 321}
   m_MaxSize: {x: 8004, y: 8021}
   vertical: 1
-  controlID: 15754
+  controlID: 26342
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 15755
+  controlID: 26343
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,14 +228,14 @@ MonoBehaviour:
     width: 878
     height: 703
   m_SceneLighting: 1
-  lastFramingTime: 14722.218933409149
+  lastFramingTime: 17653.788443412606
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.314259, y: 13.025925, z: 40.915413}
+    m_Target: {x: -9.72587, y: 17.76484, z: 21.268879}
     speed: 2
-    m_Value: {x: -8.314259, y: 13.025925, z: 40.915413}
+    m_Value: {x: -9.72587, y: 17.76484, z: 21.268879}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -258,13 +258,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.08240679, y: 0.0014946928, z: -0.0001235744, w: -0.9965977}
+    m_Target: {x: 0.016497782, y: 0.012294418, z: 0.0002027996, w: -0.9997883}
     speed: 2
-    m_Value: {x: -0.0824068, y: 0.0014946929, z: -0.0001235744, w: -0.99659777}
+    m_Value: {x: 0.016497782, y: 0.012294417, z: 0.0002027996, w: -0.9997883}
   m_Size:
-    m_Target: 87.7311
+    m_Target: 67.97609
     speed: 2
-    m_Value: 87.7311
+    m_Value: 67.97609
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -420,10 +420,10 @@ MonoBehaviour:
     y: 0
     width: 327
     height: 948
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 15685
+  controlID: 26390
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,8 +442,8 @@ MonoBehaviour:
     y: 0
     width: 327
     height: 562
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -477,9 +477,9 @@ MonoBehaviour:
     height: 541
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 84260000
-    m_LastClickedID: 9860
-    m_ExpandedIDs: 1afcffff00000000402600008026000084260000e626000028270000
+    m_SelectedIDs: de260000
+    m_LastClickedID: 9950
+    m_ExpandedIDs: c89af6ff629bf6ff669bf6ff0aa7f6ffa4a7f6ffa8a7f6ff383ef9ff463ef9ff663ef9ffb66bfaffd26bfaffc2ebfaff78eefaffc60bfcffe80efdff18fcffff1afcffff0000000036260000442600005e2600009a260000ac260000de260000ec260000062700001a270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,19 +565,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Physic Materials
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/Physic Materials
+  - Assets/Scripts
   m_LastFoldersGridSize: 53
   m_LastProjectPath: C:\Users\OOla\Desktop\Icy Tower Moonlit\IcyTowerClone\Icy Tower
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a260000
-    m_LastClickedID: 9738
-    m_ExpandedIDs: 00000000f2250000ffffff7f
+    m_SelectedIDs: 02260000
+    m_LastClickedID: 9730
+    m_ExpandedIDs: 00000000f4250000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,7 +605,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f2250000ffffff7f
+    m_ExpandedIDs: 00000000f4250000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -630,8 +630,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 84260000
-    m_LastClickedInstanceID: 9860
+    m_SelectedInstanceIDs: de260000
+    m_LastClickedInstanceID: 9950
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 5c030000c623000032e6fcff3c0100009e81f3ffb833000060330000de33000000000000
     m_RenameOverlay:
@@ -659,7 +659,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 53
-  m_DirectoriesAreaWidth: 144
+  m_DirectoriesAreaWidth: 110
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -711,7 +711,7 @@ MonoBehaviour:
     y: 91
     width: 275
     height: 927
-  m_ScrollPosition: {x: 0, y: 172.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 258

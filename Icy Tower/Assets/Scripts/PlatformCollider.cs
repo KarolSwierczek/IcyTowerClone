@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlatformCollider : MonoBehaviour {
 
-    private BoxCollider _platform;
+    private BoxCollider platform;
 
     void Start () {
-        _platform = transform.parent.gameObject.GetComponent<BoxCollider>();
+        platform = transform.parent.gameObject.GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Physics.IgnoreCollision(other, _platform, true);
+            Physics.IgnoreCollision(other, platform, true);
         }
     }
 
@@ -22,7 +22,7 @@ public class PlatformCollider : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Physics.IgnoreCollision(other, _platform, false);
+            Physics.IgnoreCollision(other, platform, false);
         }
     }
 }
