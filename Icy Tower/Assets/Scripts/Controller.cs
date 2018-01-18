@@ -18,6 +18,7 @@ public class Controller : MonoBehaviour {
     public LayerMask Ground;
 
     private Rigidbody body;
+    private Animator anim;
     private float input = 0.0f;
     private bool isGrounded = true;
     private Transform groundChecker;
@@ -31,6 +32,7 @@ public class Controller : MonoBehaviour {
     void Start()
     {
         body = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         groundChecker = transform.GetChild(0);
         timer = 0;
     }
@@ -38,6 +40,7 @@ public class Controller : MonoBehaviour {
     void Update()
     {
         isGrounded = (Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore) && verticalVelocity <= 0);
+        anim.SetBool("isGrounded", isGrounded);
         input = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButton("Jump") && isGrounded && !isJumping)
@@ -47,6 +50,7 @@ public class Controller : MonoBehaviour {
             verticalVelocity = JumpHeight / JumpTime * jumpModifier; 
             body.velocity = new Vector3(body.velocity.x, verticalVelocity, 0.0f);  
             isJumping = true;
+            anim.Play("Jump");
         }
 
         if (isJumping)
@@ -63,10 +67,19 @@ public class Controller : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //jump modifier update.
+        //jump modifier and animator bool parameter update.
         if (isGrounded)
         {
             jumpModifier = UpdateJumpModifier(horizontalVelocity);
+
+            if (jumpModifier >= 1 + 0.8 * Flow)
+            {
+                anim.SetBool("isSuperJumping", true);
+            }
+            else
+            {
+                anim.SetBool("isSuperJumping", false);
+            }
         }
 
         if (input * horizontalVelocity < 0)

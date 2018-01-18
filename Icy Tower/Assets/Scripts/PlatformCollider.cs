@@ -12,10 +12,14 @@ public class PlatformCollider : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        try
         {
-            Physics.IgnoreCollision(other, platform, true);
+            if (other.tag == "Player")
+            {
+                Physics.IgnoreCollision(other, platform, true);
+            }
         }
+        catch { }
     }
 
     private void OnTriggerExit(Collider other)

@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 887150478}
   - component: {fileID: 887150477}
   - component: {fileID: 887150483}
+  - component: {fileID: 887150484}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -286,6 +287,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1743c0571999f7b42b5c28279fb54ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &887150484
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 887150476}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dca41904b048c1845a5da4c2b26309e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1574023019
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 887150482}
+  RisingSpeed: 0.01
 --- !u!1 &1596484064
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,14 +481,6 @@ MonoBehaviour:
   - Sand 1
   - Sand 1
   - Top
-  Bottom: {fileID: 4897446153390046, guid: 2baf8e04562e0b542833b4ac2ba3294f, type: 2}
-  Top: {fileID: 4189476794312022, guid: 3d2ab43401bbbef40a06d650b8108318, type: 2}
-  Normal0: {fileID: 4179809213301680, guid: cb4ab207f4e08b14d81cc1b15ab69ddc, type: 2}
-  Normal1: {fileID: 4257151085050624, guid: 309373dd6dd79a8498f15cceceb649be, type: 2}
-  Ice0: {fileID: 4677121750139454, guid: a986f41d7798dcf46865ae6964ac027c, type: 2}
-  Ice1: {fileID: 4382088112029476, guid: ff1b3a7cc4260b24cb9e631e10ab0850, type: 2}
-  Sand0: {fileID: 4190418402852432, guid: 929423b4ca83aff41b64818f48000899, type: 2}
-  Sand1: {fileID: 4474593632531674, guid: f8e00ba45b0743c4c8d42fe309bfbbee, type: 2}
 --- !u!1 &1781000930
 GameObject:
   m_ObjectHideFlags: 0
