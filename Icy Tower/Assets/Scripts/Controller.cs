@@ -10,8 +10,7 @@ public class Controller : MonoBehaviour {
     public float ReverseSpeed = 0.6f;
     public float JumpTime = 3.0f;
     public float JumpHeight = 5.0f;
-    //Flow is how much horizontal velocity affects jumping
-    public float Flow = 3.0f;
+    public float Flow = 3.0f;  //Flow - How much horizontal velocity affects jumping.
     public float FlowThreshold = 0.7f;
     public float GroundDistance = 0.2f;
     public float Gravity = 75.0f;
@@ -32,13 +31,14 @@ public class Controller : MonoBehaviour {
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         groundChecker = transform.GetChild(0);
         timer = 0;
     }
 
     void Update()
     {
+        //check if the player character is touching the ground.
         isGrounded = (Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore) && verticalVelocity <= 0);
         anim.SetBool("isGrounded", isGrounded);
         input = Input.GetAxisRaw("Horizontal");
@@ -71,8 +71,7 @@ public class Controller : MonoBehaviour {
         if (isGrounded)
         {
             jumpModifier = UpdateJumpModifier(horizontalVelocity);
-
-            if (jumpModifier >= 1 + 0.8 * Flow)
+            if(jumpModifier > 2)
             {
                 anim.SetBool("isSuperJumping", true);
             }
