@@ -78,8 +78,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlatformCollider.cs" />
     <Compile Include="Assets\Scripts\PlatformInitialiser.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
