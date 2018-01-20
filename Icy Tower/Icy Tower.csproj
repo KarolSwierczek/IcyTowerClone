@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Death.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\SFXPlayer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

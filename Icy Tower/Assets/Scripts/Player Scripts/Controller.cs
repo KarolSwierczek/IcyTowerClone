@@ -20,6 +20,7 @@ public class Controller : MonoBehaviour {
     private Animator anim;
     private PlayerStats playerStats;
     private Transform groundChecker;
+    private SFXPlayer sfx;
     private float input = 0.0f;
     private float horizontalVelocity = 0.0f;
     private float verticalVelocity = 0.0f;
@@ -31,11 +32,12 @@ public class Controller : MonoBehaviour {
 
     void Start()
     {
-        Physics.IgnoreLayerCollision(0, LayerMask.NameToLayer("Platform"), false); // Necessary after going back to main menu
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"), false); // Necessary after going back to main menu
         body = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         groundChecker = transform.GetChild(0);
         playerStats = GetComponent<PlayerStats>();
+        sfx = GetComponent<SFXPlayer>();
         timer = 0;
     }
 
@@ -54,6 +56,7 @@ public class Controller : MonoBehaviour {
             body.velocity = new Vector3(body.velocity.x, verticalVelocity, 0.0f);  
             isJumping = true;
             anim.Play("Jump");
+            sfx.playJumpingSound(isSuperJumping);
             playerStats.JumpCounter(isSuperJumping);
         }
 

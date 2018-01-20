@@ -8,7 +8,7 @@ public class CameraTrigger : MonoBehaviour {
 
     void Start()
     {
-        cameraMovement = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
+        cameraMovement = GameObject.Find("Cameras").GetComponent<CameraMovement>();
     }
 
     private void OnTriggerEnter(Collider other)

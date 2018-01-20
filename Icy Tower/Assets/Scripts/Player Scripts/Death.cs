@@ -25,7 +25,7 @@ public class Death : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            Physics.IgnoreLayerCollision(0, LayerMask.NameToLayer("Platform"), true);
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"), true);
             cameraMovement.SetDeath(true);
             stats = player.GetComponent<PlayerStats>().OnDeath();
             dispalyStats = true;
