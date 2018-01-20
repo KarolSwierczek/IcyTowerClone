@@ -79,13 +79,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ButtonHandler.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Controller.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\PlatformCollider.cs" />
-    <Compile Include="Assets\Scripts\PlatformInitialiser.cs" />
-    <Compile Include="Assets\Scripts\PlayerStats.cs" />
-    <Compile Include="Assets\Scripts\SegmentSpawner.cs" />
+    <Compile Include="Assets\Scripts\Camera Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera Scripts\CameraTrigger.cs" />
+    <Compile Include="Assets\Scripts\Menu Scripts\HighScoreUpdate.cs" />
+    <Compile Include="Assets\Scripts\Menu Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Platform Scripts\MaterialIce.cs" />
+    <Compile Include="Assets\Scripts\Platform Scripts\MaterialSand.cs" />
+    <Compile Include="Assets\Scripts\Platform Scripts\PlatformCollider.cs" />
+    <Compile Include="Assets\Scripts\Platform Scripts\PlatformInitialiser.cs" />
+    <Compile Include="Assets\Scripts\Platform Scripts\SegmentSpawner.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Death.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerStats.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
