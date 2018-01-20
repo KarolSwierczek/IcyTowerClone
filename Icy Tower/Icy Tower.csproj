@@ -78,7 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\CameraTrigger.cs" />
     <Compile Include="Assets\Scripts\Menu Scripts\HighScoreUpdate.cs" />
