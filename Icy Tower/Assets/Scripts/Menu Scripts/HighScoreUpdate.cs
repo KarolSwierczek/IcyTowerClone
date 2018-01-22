@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This script displays the high score stored in PlayerPrefs.
+//The scores are set on player death by PlayerStats script.
 public class HighScoreUpdate : MonoBehaviour {
 
     public Text score;
 
 	void Start () {
-        //score = GetComponent<Text>();
         try
         {
             score.text =

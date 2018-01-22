@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script controlls camera movement.
+//There are two cameras - one can only see player and the other - everything else.
+//This way the player character is always rendered on top.
+
 public class CameraMovement : MonoBehaviour {
 
     public Transform Player;

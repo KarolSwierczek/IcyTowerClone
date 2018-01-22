@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script changes Controller script parameters to achieve different movement for each level.
+//It's attached to the first platform of the first segment of a new level.
 public class MaterialSand : MonoBehaviour {
 
     private Controller player;

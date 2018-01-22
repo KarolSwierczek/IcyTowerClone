@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script lets the CameraMovement script know when the cameras can begin rising.
+//Theres a trigger collider on the bottom segment that triggers this event.
 public class CameraTrigger : MonoBehaviour {
 
     private CameraMovement cameraMovement;

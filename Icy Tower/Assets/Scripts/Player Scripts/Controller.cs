@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This script controlls movement.
+//Only collisons and bouncing are taken from rigidbody class. 
+//The rest of physics is created from scratch in order to achieve similar "feel" to the original game
 public class Controller : MonoBehaviour {
 
     public float MaxSpeed = 30.0f;
     public float Acceleration = 40.0f;
     public float Deceleration = 0.12f;
-    public float ReverseSpeed = 0.6f;
+    public float ReverseSpeed = 0.6f; //Modifies acceleration when changing horizontal direction.
     public float JumpTime = 3.0f;
     public float JumpHeight = 5.0f;
-    public float Flow = 3.0f;  //Flow - How much horizontal velocity affects jumping.
-    public float FlowThreshold = 0.7f;
-    public float GroundDistance = 0.2f;
+    public float Flow = 3.0f;  //How much horizontal velocity affects jumping.
+    public float FlowThreshold = 0.7f; //Flow kicks in when horizontal velocity reaches this value times max velocity.
+    public float GroundDistance = 0.2f; //Used by CheckSphere.
     public float Gravity = 75.0f;
     public LayerMask Ground;
 
@@ -28,7 +32,7 @@ public class Controller : MonoBehaviour {
     private bool isJumping = false;
     private bool isSuperJumping = false;
     private float timer = 0.0f;
-    private float jumpModifier = 0.0f;
+    private float jumpModifier = 0.0f; //Affects jump height and jump time.
 
     void Start()
     {
@@ -74,7 +78,7 @@ public class Controller : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //jump modifier and animator bool parameter update.
+        //Jump modifier and animator bool parameter update.
         if (isGrounded)
         {
             jumpModifier = UpdateJumpModifier(horizontalVelocity);

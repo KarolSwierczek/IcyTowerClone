@@ -210,7 +210,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 678187615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.84, z: 0}
+  m_LocalPosition: {x: 0, y: -0.653, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 887150482}
@@ -226,7 +226,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &887150476
 GameObject:
@@ -269,7 +269,7 @@ MonoBehaviour:
   JumpHeight: 3.6
   Flow: 1.2
   FlowThreshold: 0.6
-  GroundDistance: 0.2
+  GroundDistance: 0.45
   Gravity: 120
   Ground:
     serializedVersion: 2
@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1743c0571999f7b42b5c28279fb54ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StatsFont: {fileID: 12800000, guid: 2e4109ec3249f4245bcadb17863791c9, type: 3}
 --- !u!82 &887150484
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1169,4 +1170,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1ecdf4ce0a7d342afcd8d58a6df477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 2800000, guid: cdb83b72b5370404ea728d426d0440a2, type: 3}
+  background: {fileID: 2800000, guid: 9d900c11c86db1f4ea1fae0336920a28, type: 3}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script plays a random sound from a given array when the player is jumping/superjumping.
 public class SFXPlayer : MonoBehaviour {
 
     public AudioClip[] JumpingSounds;

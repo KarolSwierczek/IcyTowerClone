@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This Script controlls collision between the player and an individual platform.
+//Each platform has a trigger collider underneath it.
+//This creates a one-way platform mechanic.
 public class PlatformCollider : MonoBehaviour {
 
     private BoxCollider platform;

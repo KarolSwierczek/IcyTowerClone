@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script spawns new level segments on top of the current segment
+//and despawns segments beneath it.
+//This happens when player raches the middle of a current segment.
+//Each segment holds 10 platforms, walls, background and foreground planes.
+//The segments are stored in Resources folder as prefabs.
 public class SegmentSpawner : MonoBehaviour {
 
     private Transform player;
-    private int bottomLevel = 0;
-    private Dictionary<string, Transform> transforms;
-
+    private int bottomLevel = 0; //y transform of the current segment.
     private Object bottomSegment = null;
     private Object topSegment = null;
 
+    //This array controlls segment number and order.
     public string[] SegmentOrder =
         {"Bottom", "Normal 1", "Normal 1", "Normal 1", "Normal 1", "Normal 0", "Normal 1", "Normal 1", "Normal 1", "Normal 1",
         "Ice 0", "Ice 1", "Ice 1", "Ice 1", "Ice 1", "Ice 0", "Ice 1" , "Ice 1", "Ice 1", "Ice 1",
