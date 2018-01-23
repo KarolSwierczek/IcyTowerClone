@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 492}
   m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 19363
+  controlID: 1756
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 19364
+  controlID: 1757
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 19365
+  controlID: 1758
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 475
     height: 782
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -228,14 +228,14 @@ MonoBehaviour:
     width: 471
     height: 761
   m_SceneLighting: 1
-  lastFramingTime: 17129.01379980903
+  lastFramingTime: 292.6718689647646
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.026333928, y: 0.78596413, z: -0.118083954}
+    m_Target: {x: 0, y: 2.24, z: -0.6}
     speed: 2
-    m_Value: {x: -0.026333928, y: 0.78596413, z: -0.118083954}
+    m_Value: {x: 0, y: 2.24, z: -0.6}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -258,13 +258,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06595292, y: -0.0012005307, z: 0.00007935761, w: -0.997822}
+    m_Target: {x: -0.11806288, y: -0.05181337, z: 0.0061688814, w: -0.99163425}
     speed: 2
-    m_Value: {x: -0.06595291, y: -0.0012005306, z: 0.000079357604, w: -0.9978219}
+    m_Value: {x: -0.118062876, y: -0.05181337, z: 0.0061688814, w: -0.9916342}
   m_Size:
-    m_Target: 1.3148692
+    m_Target: 3.2508333
     speed: 2
-    m_Value: 1.3148692
+    m_Value: 3.2508333
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 19322
+  controlID: 1719
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,8 +442,8 @@ MonoBehaviour:
     y: 0
     width: 581
     height: 376
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -477,9 +477,9 @@ MonoBehaviour:
     height: 355
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2740000
-    m_LastClickedID: 29906
-    m_ExpandedIDs: c24df7ff2a9bf7ff2ce2f7ffc62af8ff4e5cf8ffee64f8ffaa9af8ff3caef8ff5ac7f8ffdc42f9ffca50f9ff00c6f9ff02c6f9ff04c6f9ff4e43faff1c5afaff2c75faff3475faff4c86faff5486faffda99faffe299faff52a3fbff5aa3fbfff05efcfff85efcff9262fcffba7cfcff8892fcff9092fcff4cc6fcff54c6fcff2203fdff2a03fdff1a9efdff229efdffdaa4fdff04c1fdffdcf9fdff90fefdff3c0bfeffe6d3ffffeed3ffff1afcffff00000000ca2c0000c6420000e4420000fe4200000a43000032490000544e0000724e00001a550000805e0000905e0000d874000010750000
+    m_SelectedIDs: 32e7ffff
+    m_LastClickedID: -6350
+    m_ExpandedIDs: 32e7ffff06fcffff00000000062700002a270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +498,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 13}
     m_SearchString: 
   m_ExpandedScenes:
-  - menu
+  - game
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -520,8 +520,8 @@ MonoBehaviour:
     y: 376
     width: 581
     height: 572
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -565,19 +565,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Images
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Images
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\OOla\Desktop\Icy Tower Moonlit\IcyTowerClone\Icy Tower
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 50260000
-    m_LastClickedID: 9808
-    m_ExpandedIDs: 0000000006260000ffffff7f
+    m_SelectedIDs: 56260000
+    m_LastClickedID: 9814
+    m_ExpandedIDs: 000000000e2600008c260000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,7 +605,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006260000ffffff7f
+    m_ExpandedIDs: 000000000e2600008c260000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -630,8 +630,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d2740000
-    m_LastClickedInstanceID: 29906
+    m_SelectedInstanceIDs: 32e7ffff
+    m_LastClickedInstanceID: -6350
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 5c030000c623000032e6fcff3c0100009e81f3ffb833000060330000de33000000000000
     m_RenameOverlay:
